@@ -37,6 +37,7 @@ import { IntlProvider, addLocaleData} from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import fr from 'react-intl/locale-data/fr';
 import zh from 'react-intl/locale-data/zh';
+import pl from 'react-intl/locale-data/pl';
 import translations from '../../i18n';
 
 export default class WysiwygEditor extends Component {
@@ -111,7 +112,7 @@ export default class WysiwygEditor extends Component {
     }, props.customBlockRenderFunc, this.getEditorState);
     this.editorProps = this.filterEditorProps(props);
     this.customStyleMap = getCustomStyleMap();
-    addLocaleData([...en, ...fr, ...zh]);
+    addLocaleData([...en, ...fr, ...zh, ...pl]);
   }
 
   componentWillMount(): void {
